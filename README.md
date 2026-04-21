@@ -1,21 +1,34 @@
-# SQL-course
+# SQL-course｜資料庫課程專案作品集
 
-這個倉庫整理了 SQL 課程實作內容，主題涵蓋：
+這個倉庫是我在資料庫課程中的完整專案成果，主軸為 **OnlineShop 電商情境**，從需求分析一路做到 SQL Server 進階功能與 Python 整合應用。
 
-- 資料需求分析、ERM、正規化
-- 實體資料庫建置與測試資料
-- 預存程序（Stored Procedure）
-- 自訂函數（User-Defined Function）
-- 觸發程序（Trigger）
-- 交易與鎖定（Transaction / Isolation Level）
-- SQL Server 與 Python（機器學習、CRUD 網站介面）整合
+## 專案定位
 
----
+- 課堂情境下的實作型專案，不是單一作業拼湊
+- 展示我在資料庫設計、SQL 撰寫、交易控制與系統整合的能力
+- 未來可作為實習/面試時的作品集與技術討論材料
 
-## 倉庫檔案總覽
+## 我在這個專案中完成的內容
 
-### 課程講義（PDF / Architect）
+- 需求分析、ERM 建模與正規化
+- 建立實體資料庫、資料表與測試資料
+- 撰寫預存程序（Stored Procedure）處理報表邏輯
+- 撰寫自訂函數（UDF）計算訂單與會員消費資料
+- 撰寫觸發程序（Trigger）進行商業規則控管
+- 交易與鎖定實驗，觀察隔離層級與並行行為
+- 使用 Python（Gradio + pyodbc）建立 CRUD 操作介面
+- 測試 SQL Server 執行外部 Python 腳本的機器學習整合流程
 
+## 技術與工具
+
+- Database: SQL Server
+- SQL: DDL / DML / Stored Procedure / UDF / Trigger / Transaction / TRY...CATCH
+- Modeling: ERM、Normalization
+- Python: pyodbc、pandas、gradio
+
+## 倉庫內容
+
+### 文件與課程產出
 - `第一週-資料需求分析.pdf`
 - `第二週-ERM.pdf`
 - `第二週-ERM.architect`
@@ -29,43 +42,20 @@
 - `網站開發.pdf`
 - `機器學習.pdf`
 
-### SQL 實作檔
+### 核心 SQL 檔案
+- `第七週-實體資料庫建置.sql`
+- `第九週-預存程序.sql`
+- `第十週-自訂函數.sql`
+- `第十一週-觸發程序.sql`
+- `第十二週_1.sql`
+- `第十二週_2A.sql`
+- `第十二週_2B.sql`
+- `網站開發.sql`
+- `機器學習.sql`
 
-- `第七週-實體資料庫建置.sql`：建立 `OnlineShop` 資料庫、資料表與測試資料
-- `第九週-預存程序.sql`：會員訂單報表預存程序
-- `第十週-自訂函數.sql`：計算訂單金額與會員總消費函數
-- `第十一週-觸發程序.sql`：訂單數量檢查、發行商刪除限制
-- `第十二週_1.sql`：交易控制與錯誤處理（TRY...CATCH）
-- `第十二週_2A.sql`、`第十二週_2B.sql`：鎖定/隔離層級示範
-- `網站開發.sql`：網站開發資料庫初始化（含測試資料）
-- `機器學習.sql`：SQL Server 外部 Python 腳本執行範例
+### Python 檔案
+- `網站開發.py`
 
-### Python 程式
+## 補充說明
 
-- `網站開發.py`：以 Gradio + pyodbc 建立 OnlineShop CRUD 操作介面
-
----
-
-## 快速開始
-
-1. 使用 SQL Server 開啟並執行 `第七週-實體資料庫建置.sql`（或 `網站開發.sql`）初始化資料庫。
-2. 依照主題執行對應 SQL：
-   - 預存程序：`第九週-預存程序.sql`
-   - 自訂函數：`第十週-自訂函數.sql`
-   - 觸發程序：`第十一週-觸發程序.sql`
-   - 交易與鎖定：`第十二週_1.sql`、`第十二週_2A.sql`、`第十二週_2B.sql`
-3. 若要執行 Python CRUD 介面：
-   - 調整 `網站開發.py` 中 `DB_CONFIG` 連線設定
-   - 安裝套件：`gradio`、`pyodbc`、`pandas`
-   - 執行：`python 網站開發.py`
-
----
-
-## 學習順序
-
-1. 需求分析與 ERM（第 1～2 週）
-2. 正規化（第 3、6 週）
-3. 建庫與資料表（第 7 週）
-4. 預存程序 / 函數 / 觸發器（第 9～11 週）
-5. 交易與鎖定（第 12 週）
-6. 延伸整合：網站 CRUD 與機器學習
+此專案以學習與能力展示為目的，資料與情境為教學用範例。若面試官希望，我可以進一步說明各 SQL 模組的設計取捨與實作細節。
