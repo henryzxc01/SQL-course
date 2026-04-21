@@ -1,6 +1,6 @@
-# SQL-course｜資料庫課程專案作品集
+# SQL-course｜資料庫課程專案
 
-這個倉庫是我在資料庫課程中的完整專案成果，主軸為 **OnlineShop 電商情境**，從需求分析一路做到 SQL Server 進階功能與 Python 整合應用。
+這個倉庫是我在資料庫課程中的專案成果，主軸為 **OnlineShop 電商情境**，從需求分析一路做到 SQL Server 進階功能與 Python 整合應用。
 
 ## 專案定位
 
